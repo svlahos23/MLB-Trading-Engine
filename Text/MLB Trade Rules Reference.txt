@@ -1,0 +1,271 @@
+MLB TRADE RULES REFERENCE
+2026 SYSTEM VALUES
+- Governing Agreement: 2022-2026 MLB Collective Bargaining Agreement and applicable Major League Rules
+- Competitive Balance Tax Base Threshold: $244 million
+- CBT Surcharge Thresholds: $264 million, $284 million, and $304 million
+- Major League Minimum Salary: $780,000
+- Standard Active Roster: 26 players (maximum 13 pitchers)
+- September Active Roster: 28 players (maximum 14 pitchers)
+- Reserve (40-Man) Roster: 40 players
+- 2026 Trade Deadline: August 3, 2026 at 6:00 p.m. Eastern Time
+
+1. NO SALARY MATCHING REQUIREMENT
+MLB generally does not require teams to match incoming and outgoing player salaries.
+A club may acquire substantially more or less salary than it sends away.
+Validation:
+Do not reject a trade because incoming salary exceeds outgoing salary.
+
+2. NO HARD TEAM SALARY CAP
+MLB does not impose an NBA-style team salary cap or apron system.
+There is no general CBA salary-matching ceiling on a player's acquisition by trade.
+The Competitive Balance Tax may create financial consequences rather than prohibit the trade.
+
+3. COMPETITIVE BALANCE TAX
+For 2026, the base CBT threshold is $244 million.
+Tax payroll generally uses contract average annual values (AAV), plus applicable benefits
+and other adjustments rather than just current-year cash salaries.
+Basic repeat-offender rates on amounts above the base threshold:
+- First consecutive year: 20%
+- Second consecutive year: 30%
+- Third consecutive year or more: 50%
+Crossing a CBT threshold does not automatically invalidate a trade.
+
+4. COMPETITIVE BALANCE TAX SURCHARGES
+The 2026 surcharge thresholds are approximately:
+- $264 million: base threshold + $20 million
+- $284 million: base threshold + $40 million
+- $304 million: base threshold + $60 million
+Additional surcharge rates apply at progressively higher payroll levels.
+At $40 million or more above the base threshold, specified future draft-pick
+placement penalties can also apply, subject to the top-six-pick exception.
+Validation:
+Calculate separately from transaction legality; do not reject solely for CBT impact.
+
+5. 40-MAN ROSTER LIMIT
+A Major League club generally cannot exceed 40 players on its 40-man roster.
+A player arriving on a 40-man roster contract generally requires an available
+40-man roster spot on the acquiring team.
+A trade may create a vacancy by sending another 40-man player away.
+Validation:
+Count each team's post-transaction 40-man roster independently, including required
+corresponding roster moves. If there is no legal way to create space, flag the deal.
+
+6. ACTIVE ROSTER LIMIT
+From Opening Day through August 31, the normal active roster is 26 players, with a
+maximum of 13 designated pitchers; eligible two-way players are treated specially.
+From September 1 through the end of the regular season, it is 28 players, with a
+maximum of 14 designated pitchers. The postseason roster normally returns to 26.
+Validation:
+If an acquired player will be active, validate a compliant active roster or identify
+an available option, injured-list, or other corresponding transaction.
+
+7. UNEQUAL NUMBERS OF PLAYERS
+Teams generally may exchange unequal numbers of players.
+Examples include one player for multiple prospects or multiple players for one player.
+There is no general rule requiring equal player counts or equal player salaries.
+Validation:
+Check roster capacity and each player's individual eligibility, not equal counts.
+
+8. CONTRACTUAL NO-TRADE CLAUSES
+A player may have a full or partial contractual no-trade clause.
+- Full clause: player consent is needed for a trade to another club.
+- Partial clause: consent is needed when the destination is a protected club.
+The list of protected teams may change under the terms of the contract.
+Validation:
+Compare the destination against the player's current contractual rights.
+Without required consent, mark the deal conditional or prohibited as appropriate.
+
+9. TEN-AND-FIVE TRADE CONSENT RIGHTS
+A player with at least 10 years of Major League service, including the past five
+consecutive years with the same club, has the right to veto a proposed trade.
+These rights apply even if the player lacks a separately negotiated no-trade clause.
+Validation:
+Require player consent before treating such a trade as executable.
+
+10. RECENTLY SIGNED MAJOR LEAGUE FREE AGENTS
+An applicable Article XX(B) free-agent signing generally cannot be assigned before
+the following June 16 without the player's written consent under the relevant CBA rule.
+The consent exception contains additional conditions, including a restriction on
+cash consideration. This rule should not automatically be applied to every contract.
+Validation:
+Check the type and date of the free-agent signing, applicable consent, and any
+conditions on an early assignment.
+
+11. RECENTLY DRAFTED PLAYERS
+Players signed following the Rule 4 amateur draft generally cannot be traded until
+the day after the World Series ends in their draft year.
+An ineligible newly drafted player cannot be used to bypass the restriction merely
+by labeling him a player to be named later.
+Validation:
+Compare draft/signing year and the applicable World Series completion date.
+
+12. PLAYERS UNDER CONTRACT AND FREE AGENTS
+An MLB club can trade the contractual rights it actually holds, subject to restrictions.
+An unrestricted free agent who has left the club's control is not a player asset
+that the former club may include in a trade.
+Pre-arbitration and arbitration-eligible players are generally tradeable while
+under club control, subject to other applicable restrictions.
+
+13. MINOR LEAGUE PLAYERS NOT ON THE 40-MAN ROSTER
+Eligible Minor League players on Minor League contracts may generally be traded.
+Players not on a 40-man roster may generally still be traded after the Major League
+Trade Deadline, subject to applicable contract and transaction restrictions.
+Validation:
+Distinguish a Minor League contract from a Major League contract and verify 40-man
+status as of the transaction date.
+
+14. MAJOR LEAGUE TRADE DEADLINE
+The 2026 MLB Trade Deadline was August 3, 2026 at 6:00 p.m. ET.
+After the deadline, clubs cannot trade players on 40-man rosters during the
+restricted in-season period. The old August waiver-trade system no longer exists.
+Eligible non-40-man Minor Leaguers may still be traded after the deadline.
+Validation:
+Store the trade deadline as a season-specific variable and check transaction time.
+
+15. OFFSEASON TRADE WINDOW
+Normal Major League player trading resumes after the World Series in the applicable
+offseason transaction window, subject to league rules and player-contract rights.
+The in-season Trade Deadline is not a permanent prohibition on future trades.
+Validation:
+Use an annual transaction calendar, not a blanket after-deadline ban.
+
+16. PLAYER TO BE NAMED LATER (PTBNL)
+A trade may contain a player to be named later, subject to eligibility rules.
+The remaining player generally must be identified within six months.
+The designated player must be eligible for assignment under the applicable rules.
+A PTBNL cannot be used to evade a substantive ban on trading that player.
+Validation:
+Record the agreement date, resolution deadline, eligibility and eventual identity.
+
+17. CASH CONSIDERATIONS
+MLB teams may generally include permitted cash considerations in player trades.
+There is no NBA-style general annual cash-trade allowance or second-apron restriction.
+Cash terms must still comply with applicable MLB rules, contractual rights and
+special restrictions on particular types of transactions.
+Validation:
+Track payments, dates, payer, recipient and any special transaction limitations.
+
+18. RETAINED SALARY AND FINANCIAL OBLIGATIONS
+Clubs may negotiate cash payments and allocation of remaining contract obligations
+in trades, subject to MLB rules and player-contract terms.
+Salary liability, actual cash paid and CBT payroll accounting are not necessarily
+identical measurements.
+Validation:
+Model each remaining contract year, cash transferred and CBT consequences separately.
+
+19. ORDINARY AMATEUR DRAFT PICKS
+MLB clubs generally cannot trade ordinary Rule 4 amateur draft selections.
+This includes normal first-round picks and most other regular selections.
+Do not apply the NBA's Stepien Rule, future-pick horizon or pick-swap machinery to
+these ineligible MLB selections.
+Validation:
+Reject a draft pick unless it fits a specifically permitted tradeable category.
+
+20. COMPETITIVE BALANCE DRAFT PICKS
+Competitive Balance Round A and Round B picks are the principal tradeable MLB
+amateur draft selections under the 2022-2026 system.
+- Only the club originally awarded the selection can trade it.
+- The receiving club cannot trade the selection again.
+- The pick cannot be traded solely for cash consideration.
+- Applicable timing and transaction requirements must also be met.
+Validation:
+Check pick type, originating club, previous transfers, trade consideration and date.
+
+21. INTERNATIONAL BONUS POOL AND DRAFT RIGHTS
+International signing bonus pool allotments and international signing rights are
+not ordinary MLB player contracts or freely interchangeable draft selections.
+Their movement depends on the specific signing-system rules in force.
+Validation:
+Do not automatically treat bonus pool capacity or unsigned-player rights as an
+unrestricted tradeable asset. Apply a separately verified rule set when supported.
+
+22. RULE 5 DRAFT PLAYERS
+A player selected in the Major League phase of the Rule 5 Draft can be traded.
+The acquiring club generally inherits the Rule 5 active-roster and offer-back
+requirements until those restrictions are satisfied or the full rights are acquired.
+Validation:
+Carry Rule 5 status with the player and check the acquiring club's roster plan.
+
+23. INJURED PLAYERS
+An injury or placement on an injured list does not by itself make every trade illegal.
+The player's medical condition, contract and any applicable transaction restrictions
+must be evaluated. Trades may depend on medical review or related conditions.
+Validation:
+Do not categorically exclude all injured players; flag unresolved medical or
+contractual conditions for review.
+
+24. 60-DAY INJURED LIST AND 40-MAN SPACE
+A player properly placed on the 60-day injured list does not occupy a 40-man spot
+while on that list. A club must restore the player to the 40-man roster when required.
+The timing of 60-day IL eligibility and offseason reinstatement matters.
+Validation:
+Project roster counts after all required activations and corresponding moves.
+
+25. MINOR LEAGUE OPTIONS
+A 40-man player may have option years allowing assignment to the Minor Leagues
+without first clearing outright waivers.
+- Players typically receive three option years, with certain fourth-year cases.
+- At most five optional assignments are generally permitted in a season.
+- Players with at least five years of Major League service have consent rights for
+  optional assignment.
+Validation:
+Do not treat acquisition as prohibited solely because a player lacks options;
+assess whether the receiving club can legally keep him on its active roster.
+
+26. DESIGNATED FOR ASSIGNMENT (DFA)
+DFA removes a player from the 40-man roster.
+A designated player generally must be traded or placed on the appropriate waivers
+within seven days of the designation.
+Validation:
+If a traded player is currently designated for assignment, account for the DFA
+deadline and whether an assignment can be completed lawfully.
+
+27. WAIVERS AND OUTRIGHT ASSIGNMENTS
+Waiver claims and trades are legally different transactions.
+A post-deadline outright waiver claim is not a negotiated player-for-player trade.
+Some players possess consent or free-agency election rights when a club attempts
+to assign them outright to the Minor Leagues.
+Validation:
+Do not model waiver claims as trades or assume every waiver outcome is controllable.
+
+28. FREE-AGENCY AND ARBITRATION CONTROL
+A player generally becomes eligible for MLB free agency after accumulating six
+years of Major League service, unless a binding contract covers later seasons.
+Many players become arbitration-eligible after three years, with some Super Two
+players eligible earlier.
+Trades do not reset accumulated Major League service time.
+Validation:
+Project club control and arbitration status using service time and contract terms.
+
+29. CONTRACT OPTIONS, OPT-OUTS AND INCENTIVES
+Contracts may contain club options, player options, mutual options, opt-out clauses,
+bonuses, deferrals and other provisions affecting future financial obligations.
+A trade does not automatically extinguish contractual rights.
+Validation:
+Carry applicable options and consent provisions with the acquired contract, and
+evaluate any specific trade-triggered condition.
+
+30. POSTSEASON ROSTER ELIGIBILITY
+A player generally must have been in the organization's system by the end of
+August 31 to qualify for postseason eligibility, subject to MLB's roster and
+injury-replacement provisions.
+A trade legally executed after the Major League deadline does not automatically
+make an acquired Minor Leaguer postseason-eligible.
+Validation:
+Track postseason eligibility separately from whether the underlying trade is legal.
+
+31. MULTI-TEAM TRADE VALIDATION
+MLB permits multi-team trades, subject to each club's legal ownership and transfer
+of the assets it sends and receives.
+Validate every participating club and every player independently.
+Important checks include:
+- Player is under the sending club's control and otherwise trade-eligible
+- Transaction is permitted on the trade date
+- Required player trade consent has been obtained
+- Each receiving club has or can legally create 40-man and active-roster space
+- Any draft selections, PTBNLs and special rights are eligible for transfer
+- Rule 5 requirements and contract provisions carry over when applicable
+- Cash and contract obligations are validly recorded
+- CBT consequences are calculated without inventing a salary-matching prohibition
+For incomplete consent, corresponding moves or medical information, distinguish
+CONDITIONAL from ILLEGAL rather than automatically treating every uncertainty as a ban.
