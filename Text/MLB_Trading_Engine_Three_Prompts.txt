@@ -1,0 +1,598 @@
+PROMPT 1 — MLB PLAYER ATTRIBUTES, STRENGTHS, AND WEAKNESSES
+
+Below is a list of current MLB players grouped by team.
+
+{batch_text}
+
+Evaluate EVERY player listed.
+
+For each player, return:
+
+1. Attributes:
+
+   - Up to 8 concise attributes describing the player physically,
+
+     mentally, stylistically, or by career stage.
+
+   - Examples include:
+     age,
+     young,
+     veteran,
+     speed,
+     quickness,
+     strength,
+     size,
+     athleticism,
+     durability,
+     temperament,
+     baseball IQ,
+     postseason experience,
+     postseason riser,
+     clutch,
+     inconsistent,
+     choker,
+     high-motor,
+     injury-prone,
+     etc.
+
+2. Strengths:
+
+   - Up to 5 meaningful CURRENT baseball strengths.
+
+   - Possible areas include:
+     hitting,
+     contact hitting,
+     power hitting,
+     home run power,
+     plate discipline,
+     pitch recognition,
+     bat-to-ball skills,
+     on-base ability,
+     hitting for average,
+     hitting against left-handed pitching,
+     hitting against right-handed pitching,
+     situational hitting,
+     baserunning,
+     stolen bases,
+     speed,
+     fielding,
+     infield defense,
+     outfield defense,
+     range,
+     arm strength,
+     throwing accuracy,
+     defensive versatility,
+     catching,
+     pitch framing,
+     game calling,
+     pitching,
+     fastball command,
+     breaking balls,
+     offspeed pitches,
+     strikeout ability,
+     control,
+     command,
+     limiting walks,
+     inducing ground balls,
+     run prevention,
+     starting pitching,
+     relief pitching,
+     durability,
+     baseball IQ,
+     decision making,
+     etc.
+
+3. Weaknesses:
+
+   - Up to 5 meaningful CURRENT basketball weaknesses.
+
+   - Use the same types of baseball categories as the strengths.
+
+IMPORTANT RULES:
+
+- Be stringent.
+
+- Evaluate CURRENT ability only.
+
+- Do NOT evaluate players based on what they were at their historical peak.
+
+- Do NOT evaluate them based on what they might become in the future.
+
+- Do NOT manufacture strengths or weaknesses simply to reach 5.
+
+- If a player only has 2 clear weaknesses, return 2.
+
+- If a player only has 3 clear strengths, return 3.
+
+- Use current information when necessary.
+
+- Distinguish between reputation and current performance.
+
+- Do not call someone clutch or a choker unless there is meaningful evidence.
+
+- Do not infer personality traits without reasonable public evidence.
+
+- Baseball skills should be concrete enough that another program can
+
+  later use them to evaluate trade preferences.
+
+- Evaluate every player in the supplied batch.
+
+- Do not omit players.
+
+Return the information EXACTLY in this general format:
+
+Team Name:
+
+Player Name: Attributes ["attribute 1", "attribute 2", ...], Strengths ["strength 1", "strength 2", ...], Weaknesses ["weakness 1", "weakness 2", ...]
+
+Player Name 2: Attributes ["attribute 1", "attribute 2", ...], Strengths ["strength 1", "strength 2", ...], Weaknesses ["weakness 1", "weakness 2", ...]
+
+Next Team Name:
+
+Player Name: Attributes [...], Strengths [...], Weaknesses [...]
+
+Player Name 2: Attributes [...], Strengths [...], Weaknesses [...]
+
+Return ONLY the requested team/player information.
+
+Do not include:
+
+- an introduction
+
+- an explanation
+
+- methodology
+
+- citations
+
+- source lists
+
+- conclusions
+
+- disclaimers
+
+============================================================================
+
+PROMPT 2 — MLB USER TRADE DEMAND PARSING
+
+From this statement, you must parse multiple pieces of information.
+
+The team the user is working for, which players (or what type of baseball players) 
+
+they are looking for to join their team, what players (or what type of baseball players) they are willing to part with for this trade, 
+
+what players (or what type of baseball players) on their team are untouchable, what players you would like avoid acquiring, and what 
+
+weaknesses they want to avoid in acquired players. 
+
+This statement in particular {user_statement}
+
+Return the information in the following format:
+
+“Team Name: [Insert Team Name]
+
+Players Wanted: [Insert Player Names]
+
+Player Types Wanted: [Insert Player Types Wanted]
+
+Players Willing to Part With: [Insert Players Willing to Part With]
+
+Untouchable Players: [Insert Untouchable Players]
+
+Untouchable Player Types: [Insert Untouchable Player Types]
+
+Players to Avoid: [Insert Players to Avoid]
+
+Types of Players to Avoid: [Insert Types of Players to Avoid]
+
+Teams to Avoid: [Insert Teams to Avoid]”
+
+This is the only thing that should be returned. Do not include any other text or explanation.
+
+============================================================================
+
+PROMPT 3 — MLB TRADE SEARCH-SPACE FILTERING
+
+You are reducing the search space for an MLB trade-generation engine.
+
+You are given:
+
+1. A user's natural-language trade demands.
+
+2. Formatted information for MLB players containing their team,
+
+   Attributes, Strengths, and Weaknesses.
+
+Your job is to reduce the trade search space in TWO stages.
+
+============================================================
+
+USER DEMANDS
+
+============================================================
+
+{demands}
+
+============================================================
+
+FORMATTED PLAYER INFORMATION
+
+============================================================
+
+{all_results}
+
+============================================================
+
+STAGE 1 — REMOVE DISALLOWED PLAYERS AND TEAMS
+
+============================================================
+
+First determine which team the user represents from the USER DEMANDS.
+
+For the USER'S TEAM:
+
+- Remove any player explicitly identified as untouchable.
+
+- Remove any player who matches an untouchable player type, skill,
+
+  attribute, strength, weakness, or characteristic described by the user.
+
+- Use the player's Attributes, Strengths, and Weaknesses to determine
+
+  whether they match the user's restriction.
+
+- Interpret restrictions semantically rather than requiring exact
+
+  keyword matches.
+
+Examples:
+
+If the user says they will not trade good hitters, protect players
+whose Strengths indicate things such as:
+
+- contact hitting
+- power hitting
+- hitting for average
+- on-base ability
+- plate discipline
+- pitch recognition
+- run production
+
+If the user says they will not trade good pitchers, protect players
+whose Strengths clearly indicate strong pitching value.
+
+The players remaining on the user's team represent players the user
+
+is willing to trade away.
+
+For EVERY OTHER TEAM:
+
+- Remove any player the user explicitly says they do not want.
+
+- Remove any player matching a player type, weakness, characteristic,
+
+  attribute, or skill that the user says they want to avoid.
+
+- Use each player's Attributes, Strengths, and Weaknesses.
+
+- Interpret the user's wording semantically.
+
+- Do not require exact keyword matches.
+
+Examples:
+
+"bad hitter" may correspond to:
+
+- poor contact hitting
+- weak plate discipline
+- low on-base ability
+- high strikeout rate
+- poor pitch recognition
+- inconsistent offensive production
+
+"choker" should only match a player if their supplied player information
+actually indicates poor clutch performance, postseason decline, choking,
+or an equivalent characteristic.
+
+Do NOT infer a characteristic that is not reasonably supported by the
+
+provided player information.
+
+============================================================
+
+TEAM RESTRICTIONS
+
+============================================================
+
+If the user explicitly says they do not want to trade with a team:
+
+- Remove that ENTIRE team.
+
+- Do not include that team in Stage 1.
+
+- Do not include that team in Stage 2.
+
+A team-level restriction takes precedence over a request for an
+
+individual player on that team unless the user's demands clearly
+
+indicate an exception.
+
+============================================================
+
+EXPLICITLY WANTED PLAYERS
+
+============================================================
+
+If the user explicitly names a player they want to acquire:
+
+- Keep that player regardless of player-level avoidance filters.
+
+- Include that player in Stage 1 if their team is still eligible.
+
+- Include that player in Stage 2 if their team is still eligible.
+
+Explicitly wanted players override:
+
+- unwanted player-type filters
+
+- unwanted skill filters
+
+- unwanted weakness filters
+
+- attribute filters
+
+- general player avoidance preferences
+
+However, an explicit TEAM restriction takes precedence.
+
+============================================================
+
+STAGE 1 OUTPUT
+
+============================================================
+
+Stage 1 represents the complete remaining search space.
+
+For the user's team:
+
+Include only players who remain tradeable after applying the user's
+
+untouchable-player and untouchable-player-type restrictions.
+
+For opposing teams:
+
+Include only players who remain allowable after applying:
+
+- explicit player exclusions
+
+- undesirable player-type exclusions
+
+- undesirable skill or attribute exclusions
+
+- team exclusions
+
+Do not remove an opposing player simply because they do not match
+
+something the user wants.
+
+That matching happens in Stage 2.
+
+Stage 1 answers:
+
+"Which players are still allowed to participate in a possible trade?"
+
+============================================================
+
+STAGE 2 — IDENTIFY ACTUAL TRADE TARGETS
+
+============================================================
+
+Using ONLY opposing-team players that survived Stage 1, create a
+
+second and narrower search space.
+
+Do NOT include players from the user's own team in Stage 2.
+
+A player belongs in Stage 2 if ANY of these conditions are true:
+
+1. The user explicitly names that player as someone they want.
+
+OR
+
+2. The player meaningfully matches a player TYPE the user wants.
+
+OR
+
+3. The player meaningfully matches a skill, role, strength,
+
+   characteristic, or attribute the user wants.
+
+Examples include:
+
+- backup catcher
+- starting catcher
+- contact hitter
+- power hitter
+- on-base specialist
+- starting pitcher
+- relief pitcher
+- closer
+- strikeout pitcher
+- ground-ball pitcher
+- good defensive infielder
+- good defensive outfielder
+- versatile defender
+- base stealer
+- athlete
+- young player
+- veteran
+- high-IQ player
+- postseason performer
+- clutch player
+
+Interpret these concepts semantically.
+
+For example:
+
+"strong backup catcher" could reasonably match catchers whose supplied
+information indicates several relevant traits such as:
+
+- pitch framing
+- game calling
+- blocking
+- throwing accuracy
+- arm strength
+- catching defense
+- contact hitting
+- durability
+
+The player does NOT need to literally have the phrase
+"strong backup catcher" in their profile.
+
+However:
+
+- Do not stretch weak similarities.
+
+- Do not include someone merely because they vaguely resemble the request.
+
+- There should be meaningful evidence in their supplied Attributes,
+
+  Strengths, or Weaknesses.
+
+Explicitly wanted players must appear in Stage 2 if their team remains
+
+eligible.
+
+Stage 2 answers:
+
+"Which of the allowable opposing players actually match what the user
+
+wants to acquire?"
+
+============================================================
+
+IMPORTANT LOGIC RULES
+
+============================================================
+
+Apply the filters in this order:
+
+1. Determine the user's team.
+
+2. Identify explicitly excluded teams.
+
+3. Identify explicitly untouchable players on the user's team.
+
+4. Identify untouchable player TYPES on the user's team.
+
+5. Identify explicitly unwanted opposing players.
+
+6. Identify unwanted opposing player TYPES.
+
+7. Apply the mandatory exception for explicitly wanted players,
+
+   unless their team is prohibited.
+
+8. Construct Stage 1.
+
+9. From Stage 1 opposing players only, identify players matching
+
+   the user's desired players and desired player types.
+
+10. Construct Stage 2.
+
+Do not invent information.
+
+Use ONLY:
+
+- the user's demands
+
+- the supplied player Attributes
+
+- the supplied player Strengths
+
+- the supplied player Weaknesses
+
+- the supplied team/player associations
+
+Do not use outside knowledge.
+
+Do not perform web searches.
+
+Do not move a player to a different team.
+
+Preserve all player names exactly as supplied.
+
+Preserve all team names exactly as supplied.
+
+Do not include duplicate players.
+
+Do not include teams with zero remaining players.
+
+============================================================
+
+OUTPUT FORMAT
+
+============================================================
+
+Return EXACTLY TWO valid Python dictionaries in raw text.
+
+The FIRST dictionary is Stage 1.
+
+The SECOND dictionary is Stage 2.
+
+Do NOT include:
+
+- headings
+
+- labels
+
+- explanations
+
+- reasoning
+
+- comments
+
+- Markdown
+
+- Markdown code fences
+
+- variable assignments
+
+- introductory text
+
+- concluding text
+
+- any text between the two dictionaries
+
+Do NOT return:
+
+stage_1 = ...
+
+Do NOT return:
+
+stage_2 = ...
+
+Return this structure:
+
+{{
+
+    "Team Name": ["Player Name", "Player Name"],
+
+    "Another Team": ["Player Name", "Player Name"]
+
+}}
+
+{{
+
+    "Team Name": ["Player Name"],
+
+    "Another Team": ["Player Name"]
+
+}}
+
+The response must contain exactly two Python dictionary expressions
+
+and nothing else.
