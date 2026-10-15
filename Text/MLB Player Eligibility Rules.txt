@@ -1,0 +1,45 @@
+PLAYER CONTROL AND IDENTITY
+
+[BLOCK] A club cannot trade a player whose contract or assignable rights it does not control at the proposed transaction time.
+ [BLOCK] An unsigned free agent is not a contracted player whom a club can send away in an ordinary player trade.
+ [CONDITIONAL] A player removed from a club's 40-man roster by designation for assignment (DFA) can still be traded while the club retains the contract and before the applicable DFA resolution window expires (generally seven days). DFA does not mean automatic ineligibility.
+ [ALLOW] A player on a Minor League contract or outside the 40-man roster may still be traded, subject to the relevant contract, draft, and timing rules. Do not limit the potential player universe to 40-man rosters if the project intends to include prospects.
+
+PLAYER CONSENT AND TRADE PROTECTION
+
+ [CONSENT] A full contractual no-trade clause blocks a trade to any other club unless the player consents or waives that protection.
+ [CONSENT] A partial/limited no-trade clause requires consent for a destination on the player's protected-team list; it does not prevent a trade to every club.
+ [CONSENT] A player with at least 10 years of Major League service and the last five consecutive years of that service with the same club (10-and-5 rights) can veto a proposed trade unless consenting.
+[CONDITIONAL] Other individually negotiated contract rights, assignment-consent clauses, or applicable service-time consent rights must be reviewed where relevant. Do not assume a trade is automatically permitted just because a no-trade clause is absent.
+[CONDITIONAL] Consent must be evaluated for the SPECIFIC destination club and proposed deal, not as an unconditional yes/no player attribute.
+
+TRADE DATE AND PLAYER CONTRACT STATUS
+
+ [BLOCK] A Major League-contract player cannot be traded after the in-season MLB Trade Deadline while the regular-season/postseason trade moratorium applies. For 2026 the deadline was August 3 at 6:00 p.m. Eastern.
+ [ALLOW] Trades may resume in the offseason when MLB's applicable transaction window permits; do not apply the past in-season deadline as a permanent block.
+ [CONDITIONAL] Players on Minor League contracts and not on the 40-man roster have a different post-deadline status. Do not automatically apply the Major League-contract trade moratorium to every Minor League player; check the applicable current rules and transaction type.
+ [BLOCK] A player whose contract has expired or who has already become a free agent is not an asset the prior team may trade as a player under contract.
+ [CONDITIONAL] A pending DFA, waiver claim, release, or already completed transaction can change which club controls a player's rights. Use the exact proposed trade date and latest official transaction record.
+ [ALLOW] Being recently traded does not, by itself, impose a blanket NBA-style waiting period on an MLB player. Do not invent a 30-, 60-, or 90-day re-trade ban.
+ [ALLOW] A recent free-agent signing is not automatically untradeable for a universal NBA-style waiting period. Check actual contractual consent/assignment provisions and any applicable MLB rule; do not impose an unsupported blanket date.
+
+DRAFTED AND OTHER RESTRICTED PLAYER RIGHTS
+
+ [BLOCK] A player signed from the Rule 4 (First-Year Player) Draft cannot be traded until after the World Series concludes in the year of that draft. The restriction applies even if he would be identified as a player to be named later before eligibility begins.
+ [CONDITIONAL] Rights to unsigned draftees are not interchangeable with contracts of signed professional players; verify the applicable draft rights and transfer restrictions rather than treating unsigned draftees as ordinary trade pieces.
+ [CONDITIONAL] International amateur contracts, signing restrictions, and any special assignment limitations require case-specific verification; do not invent a universal one-year prohibition for all internationally signed players.
+ [ALLOW] A Major League Rule 5 Draft selection can be traded. Rule 5 roster/offer-back obligations follow the player to the receiving club unless rights are otherwise resolved; being a Rule 5 player is not an absolute trade ban.
+[CONDITIONAL] A player to be named later (PTBNL) must be eligible to be transferred when ultimately named. PTBNL designation must not be used to evade an otherwise applicable individual eligibility restriction.
+
+INJURED, INACTIVE, AND SPECIAL ROSTER STATUSES
+
+[ALLOW] Placement on the 10-day, 15-day, 60-day, or 7-day/concussion injured list is not, by itself, proof that a player cannot be traded.
+ [ALLOW] An optional assignment to the Minor Leagues is not, by itself, a trade prohibition.
+ [CONDITIONAL] Restricted-list, suspended, bereavement, paternity, administrative-leave, or other special statuses may involve additional approval or assignment conditions. Verify the specific status and current governing rule rather than applying a universal ban.
+ [CONDITIONAL] For a player who has been claimed on waivers, placed on release waivers, or whose rights are in transition, verify which organization controls the contract before any proposed trade.
+
+TRANSACTION-LEVEL CHECKS TO KEEP SEPARATE FROM INDIVIDUAL ELIGIBILITY
+ [CONDITIONAL] Check incoming club 40-man roster capacity and necessary accompanying roster moves. A full receiving roster does not automatically mean that the incoming individual player is untradeable.
+ [CONDITIONAL] Distinguish postseason roster eligibility from trade eligibility. Sept. 1 organization/40-man status affects postseason participation, not a universal player-trade ban.
+[CONDITIONAL] Draft-pick transfer rules, cash consideration, international bonus-pool rules, and the composition of the overall transaction are separate from whether an individual player can be assigned.
+ [CONDITIONAL] Any commissioner approval, special consent, or approval required by a particular contract or transaction should be reviewed during full validation.
